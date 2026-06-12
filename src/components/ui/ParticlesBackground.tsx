@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Particle {
   x: number;
@@ -15,8 +15,18 @@ interface Particle {
 
 export default function ParticlesBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
+    const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+    const isSmall = window.innerWidth < 768;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setEnabled(!isCoarse && !isSmall && !reducedMotion);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -33,15 +43,15 @@ export default function ParticlesBackground() {
 
     const createParticles = () => {
       particles = [];
-      const count = Math.min(Math.floor(window.innerWidth / 15), 80);
+      const count = Math.min(Math.floor(window.innerWidth / 20), 50);
       for (let i = 0; i < count; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 4 + 2,
+          size: Math.random() * 3 + 2,
           speedX: (Math.random() - 0.5) * 0.3,
           speedY: (Math.random() - 0.5) * 0.3 - 0.2,
-          opacity: Math.random() * 0.4 + 0.1,
+          opacity: Math.random() * 0.3 + 0.1,
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.02,
         });
@@ -57,31 +67,21 @@ export default function ParticlesBackground() {
       ctx.beginPath();
       ctx.ellipse(0, 0, p.size, p.size * 1.3, 0, 0, Math.PI * 2);
       ctx.fill();
-      ctx.beginPath();
-      ctx.strokeStyle = "#B8890F";
-      ctx.lineWidth = 0.5;
-      ctx.moveTo(0, -p.size * 1.3);
-      ctx.quadraticCurveTo(p.size * 0.5, 0, 0, p.size * 1.3);
-      ctx.stroke();
       ctx.restore();
     };
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       particles.forEach((p) => {
         p.x += p.speedX;
         p.y += p.speedY;
         p.rotation += p.rotationSpeed;
-
         if (p.x < -20) p.x = canvas.width + 20;
         if (p.x > canvas.width + 20) p.x = -20;
         if (p.y < -20) p.y = canvas.height + 20;
         if (p.y > canvas.height + 20) p.y = -20;
-
         drawBean(p);
       });
-
       animationId = requestAnimationFrame(animate);
     };
 
@@ -89,21 +89,24 @@ export default function ParticlesBackground() {
     createParticles();
     animate();
 
-    window.addEventListener("resize", () => {
+    const onResize = () => {
       resize();
       createParticles();
-    });
+    };
+    window.addEventListener("resize", onResize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [enabled]);
+
+  if (!enabled) return null;
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-30 dark:opacity-20"
+      className="fixed inset-0 pointer-events-none z-0 opacity-25"
       aria-hidden="true"
     />
   );

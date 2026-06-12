@@ -9,7 +9,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section-padding relative bg-espresso-light dark:bg-espresso overflow-hidden">
+    <section id="testimonials" className="section-padding relative section-surface-dark overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"

@@ -14,13 +14,13 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-espresso-dark text-cream pt-20 pb-8">
+    <footer className="section-surface-dark text-cream pt-20 pb-8">
       <div className="section-padding !py-0 !pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
             <div className="lg:col-span-2">
               <a href="#" className="inline-block mb-6" data-cursor="hover">
-                <Logo size="xl" />
+                <Logo size="xl" surface="dark" />
               </a>
               <p className="type-subtitle text-cream/60 max-w-sm mb-4">
                 {siteConfig.description}

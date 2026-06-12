@@ -16,7 +16,7 @@ const iconMap = {
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="section-padding relative bg-espresso dark:bg-espresso-dark overflow-hidden">
+    <section id="why-us" className="section-padding relative section-surface-dark overflow-hidden">
       <Spotlight className="max-w-7xl mx-auto">
         <SectionHeading
           label="The Taste of Kenya Difference"

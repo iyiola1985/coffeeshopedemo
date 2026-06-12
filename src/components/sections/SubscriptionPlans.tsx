@@ -11,7 +11,7 @@ export default function SubscriptionPlans() {
   return (
     <section
       id="subscription"
-      className="section-padding relative bg-espresso dark:bg-espresso-dark overflow-hidden"
+      className="section-padding relative section-surface-dark overflow-hidden"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-3xl" />
 
@@ -28,9 +28,9 @@ export default function SubscriptionPlans() {
             <FadeIn key={plan.name} delay={i * 0.15}>
               <motion.div
                 whileHover={{ y: -8 }}
-                className={`relative h-full flex flex-col p-8 md:p-10 rounded-3xl transition-all duration-500 ${
+                className={`relative h-full flex flex-col p-6 sm:p-8 md:p-10 rounded-3xl transition-all duration-500 ${
                   plan.popular
-                    ? "bg-gold text-espresso shadow-gold scale-105 md:scale-110 z-10"
+                    ? "bg-gold text-espresso shadow-gold md:scale-105 lg:scale-110 z-10 ring-2 ring-gold/50"
                     : "bg-cream/5 backdrop-blur-sm border border-cream/10 text-cream hover:border-gold/30"
                 }`}
                 data-cursor="hover"

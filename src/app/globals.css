@@ -5,15 +5,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
-    @apply bg-cream text-espresso font-body antialiased overflow-x-hidden;
+    @apply text-espresso font-body antialiased overflow-x-hidden;
+    background-color: #1A0E09;
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
   }
 
   .dark body,
   body.dark {
-    @apply bg-espresso-dark text-cream;
+    @apply text-cream;
+    background-color: #1A0E09;
   }
 
   ::selection {
@@ -51,7 +56,15 @@
   }
 
   .section-padding {
-    @apply px-6 md:px-12 lg:px-20 xl:px-32 py-24 md:py-32 lg:py-40;
+    @apply px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-16 sm:py-24 md:py-32 lg:py-40;
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 
   .heading-display {
@@ -76,6 +89,26 @@
 
   .nav-link {
     @apply font-display text-[11px] font-bold uppercase tracking-perk;
+  }
+
+  .section-surface-light {
+    @apply bg-cream/90 backdrop-blur-md border-y border-cream/20;
+  }
+
+  .dark .section-surface-light {
+    @apply bg-espresso-dark/80 border-cream/5;
+  }
+
+  .section-surface-dark {
+    @apply bg-espresso/85 backdrop-blur-md border-y border-cream/5;
+  }
+
+  .dark .section-surface-dark {
+    @apply bg-espresso-dark/90 border-cream/5;
+  }
+
+  .section-surface-hero {
+    @apply bg-espresso-dark/50 backdrop-blur-[2px];
   }
 
   .text-gradient-gold {
@@ -108,8 +141,21 @@
     cursor: none;
   }
 
-  .hide-cursor * {
-    cursor: none;
+  @media (pointer: fine) {
+    .hide-cursor * {
+      cursor: none;
+    }
+  }
+
+  @media (pointer: coarse) {
+    .hide-cursor,
+    .hide-cursor * {
+      cursor: auto !important;
+    }
+  }
+
+  .touch-manipulation {
+    touch-action: manipulation;
   }
 }
 

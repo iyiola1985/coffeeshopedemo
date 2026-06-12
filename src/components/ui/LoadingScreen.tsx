@@ -34,13 +34,19 @@ export default function LoadingScreen() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-espresso-dark"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center overflow-hidden"
         >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url(/images/coffee-beans-bg.png)" }}
+          />
+          <div className="absolute inset-0 bg-espresso-dark/82 backdrop-blur-[1px]" />
+
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-            className="text-center"
+            className="relative z-10 text-center"
           >
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -48,7 +54,7 @@ export default function LoadingScreen() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="flex flex-col items-center gap-4 mb-4"
             >
-              <Logo size="xl" />
+              <Logo size="hero" surface="dark" />
             </motion.div>
             <motion.p
               className="type-badge text-kenya-green-light/90 mb-2"
@@ -60,7 +66,7 @@ export default function LoadingScreen() {
             </motion.p>
           </motion.div>
 
-          <div className="absolute bottom-20 w-48 md:w-64">
+          <div className="absolute bottom-20 z-10 w-48 md:w-64">
             <div className="h-[2px] bg-cream/10 rounded-full overflow-hidden">
               <motion.div
                 className="h-full bg-kenya-green rounded-full"

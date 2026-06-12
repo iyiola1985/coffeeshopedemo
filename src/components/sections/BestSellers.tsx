@@ -10,7 +10,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export default function BestSellers() {
   return (
-    <section id="best-sellers" className="section-padding relative bg-cream dark:bg-espresso overflow-hidden">
+    <section id="best-sellers" className="section-padding relative section-surface-light overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           label="Customer Favorites"

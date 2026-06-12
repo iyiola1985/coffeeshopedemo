@@ -58,7 +58,7 @@ export default function BrewingProcess() {
     <section
       id="process"
       ref={sectionRef}
-      className="section-padding relative bg-cream dark:bg-espresso-dark overflow-hidden"
+      className="section-padding relative section-surface-light overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeading

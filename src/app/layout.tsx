@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import CustomCursor from "@/components/ui/CustomCursor";
-import ParticlesBackground from "@/components/ui/ParticlesBackground";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -32,6 +31,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,7 +50,6 @@ export default function RootLayout({
         <ThemeProvider>
           <LoadingScreen />
           <CustomCursor />
-          <ParticlesBackground />
           {children}
         </ThemeProvider>
       </body>

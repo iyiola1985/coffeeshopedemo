@@ -1,5 +1,6 @@
 export const images = {
   logo: "/images/logo.png",
+  coffeeBeansBg: "/images/coffee-beans-bg.png",
   heroLanding: "/images/hero-landing.png",
   productGiftSet: "/images/product-gift-set.png",
   productBranding: "/images/product-branding.png",

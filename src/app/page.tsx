@@ -1,3 +1,4 @@
+import SiteBackground from "@/components/ui/SiteBackground";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
@@ -12,7 +13,8 @@ import Newsletter from "@/components/sections/Newsletter";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative min-h-screen">
+      <SiteBackground />
       <Navigation />
       <Hero />
       <FeaturedProducts />
