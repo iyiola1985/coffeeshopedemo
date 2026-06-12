@@ -64,7 +64,7 @@ export default function BrewingProcess() {
         <SectionHeading
           label="From Bean to Cup"
           title="Our Brewing Process"
-          description="Every cup of Roastory coffee follows a meticulous journey — one that honors the craft and the communities behind each bean."
+          description="Every cup of Taste of Kenya coffee follows a direct path from Kenyan farms to your door — honouring the people and land behind every bean."
         />
 
         <div ref={timelineRef} className="relative max-w-4xl mx-auto">
@@ -89,13 +89,13 @@ export default function BrewingProcess() {
                     i % 2 === 0 ? "md:text-right md:pr-16" : "md:text-left md:pl-16"
                   }`}
                 >
-                  <span className="inline-block text-gold text-sm tracking-[0.3em] uppercase font-semibold mb-3">
+                  <span className="type-badge text-gold mb-3 inline-block">
                     Step {String(step.step).padStart(2, "0")}
                   </span>
-                  <h3 className="font-display text-3xl md:text-4xl text-espresso dark:text-cream mb-4 tracking-wide">
+                  <h3 className="heading-display text-2xl md:text-3xl text-espresso dark:text-cream mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-espresso/70 dark:text-cream/70 text-lg leading-relaxed">
+                  <p className="type-subtitle text-espresso/70 dark:text-cream/70">
                     {step.description}
                   </p>
                 </div>

@@ -24,15 +24,30 @@ const config: Config = {
           light: "#E8B832",
           dark: "#B8890F",
         },
+        kenya: {
+          red: "#C41E3A",
+          "red-light": "#E63946",
+          green: "#1B7A4E",
+          "green-light": "#2D9B6A",
+        },
       },
       fontFamily: {
-        display: ["var(--font-bebas)", "sans-serif"],
-        body: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-oswald)", "sans-serif"],
+        body: ["var(--font-barlow)", "sans-serif"],
+      },
+      letterSpacing: {
+        badge: "0.18em",
+        perk: "0.14em",
+        title: "0.1em",
+        display: "0.06em",
       },
       backgroundImage: {
         "hero-gradient":
           "radial-gradient(ellipse at 30% 50%, rgba(212, 160, 23, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(42, 23, 16, 0.8) 0%, transparent 60%)",
         "gold-gradient": "linear-gradient(135deg, #D4A017 0%, #E8B832 50%, #B8890F 100%)",
+        "kenya-gradient": "linear-gradient(135deg, #1B7A4E 0%, #2D9B6A 50%, #1B7A4E 100%)",
+        "hero-kenya":
+          "radial-gradient(ellipse at 20% 50%, rgba(27, 122, 78, 0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 30%, rgba(196, 30, 58, 0.08) 0%, transparent 45%)",
         "glass-gradient":
           "linear-gradient(135deg, rgba(248, 244, 238, 0.1) 0%, rgba(248, 244, 238, 0.05) 100%)",
       },

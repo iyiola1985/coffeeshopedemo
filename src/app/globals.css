@@ -55,7 +55,27 @@
   }
 
   .heading-display {
-    @apply font-display tracking-wide uppercase;
+    @apply font-display font-bold uppercase tracking-display;
+  }
+
+  .type-title {
+    @apply font-display text-[20px] font-bold uppercase tracking-title leading-tight;
+  }
+
+  .type-badge {
+    @apply font-display text-[10px] font-bold uppercase tracking-badge leading-none;
+  }
+
+  .type-subtitle {
+    @apply font-body text-[14px] leading-relaxed;
+  }
+
+  .type-perk {
+    @apply font-display text-[11px] font-bold uppercase tracking-perk leading-snug;
+  }
+
+  .nav-link {
+    @apply font-display text-[11px] font-bold uppercase tracking-perk;
   }
 
   .text-gradient-gold {

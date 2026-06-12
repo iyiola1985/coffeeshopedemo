@@ -19,9 +19,9 @@ export default function WhyChooseUs() {
     <section id="why-us" className="section-padding relative bg-espresso dark:bg-espresso-dark overflow-hidden">
       <Spotlight className="max-w-7xl mx-auto">
         <SectionHeading
-          label="The Roastory Difference"
+          label="The Taste of Kenya Difference"
           title="Why Choose Us"
-          description="We don't just roast coffee — we craft experiences. Every decision, from bean selection to packaging, reflects our commitment to excellence."
+          description="We are on a mission to reinvent the coffee industry — simplifying the supply chain so Kenyan farmers thrive and you enjoy coffee as it should be."
           light
         />
 
@@ -42,10 +42,10 @@ export default function WhyChooseUs() {
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors duration-300">
                       <Icon size={28} className="text-gold" />
                     </div>
-                    <h3 className="font-display text-2xl md:text-3xl text-cream mb-4 tracking-wide">
+                    <h3 className="type-title text-cream mb-4">
                       {item.title}
                     </h3>
-                    <p className="text-cream/60 leading-relaxed text-lg">
+                    <p className="type-subtitle text-cream/60">
                       {item.description}
                     </p>
                   </div>

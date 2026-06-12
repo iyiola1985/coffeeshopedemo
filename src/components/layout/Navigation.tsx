@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/lib/data";
 import { useTheme } from "@/components/providers/ThemeProvider";
+import Logo from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
@@ -45,13 +46,12 @@ export default function Navigation() {
           )}
         >
           <div className="grid grid-cols-[1fr_auto_1fr] items-center max-w-7xl mx-auto gap-4">
-            {/* Left nav links */}
             <div className="hidden lg:flex items-center gap-8">
               {siteConfig.navLinks.slice(0, 2).map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-cream/80 hover:text-gold text-sm tracking-wide transition-colors duration-300"
+                  className="nav-link text-cream/80 hover:text-kenya-green-light transition-colors duration-300"
                   data-cursor="hover"
                 >
                   {link.label}
@@ -59,23 +59,17 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* Center logo */}
-            <a
-              href="#"
-              className="font-display text-2xl md:text-3xl lg:text-4xl tracking-[0.15em] text-gold justify-self-center"
-              data-cursor="hover"
-            >
-              ROASTORY
+            <a href="#" className="justify-self-center" data-cursor="hover">
+              <Logo size="lg" />
             </a>
 
-            {/* Right nav + CTA */}
             <div className="flex items-center justify-end gap-3 md:gap-4">
               <div className="hidden lg:flex items-center gap-8 mr-2">
                 {siteConfig.navLinks.slice(2).map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-cream/80 hover:text-gold text-sm tracking-wide transition-colors duration-300"
+                    className="nav-link text-cream/80 hover:text-kenya-green-light transition-colors duration-300"
                     data-cursor="hover"
                   >
                     {link.label}
@@ -94,7 +88,7 @@ export default function Navigation() {
 
               <a
                 href="#featured"
-                className="hidden sm:inline-flex items-center px-5 py-2.5 bg-cream text-espresso text-sm font-semibold rounded-full hover:bg-gold transition-colors duration-300"
+                className="hidden sm:inline-flex items-center px-5 py-2.5 bg-kenya-red text-cream type-perk rounded-full hover:bg-kenya-red-light transition-colors duration-300 shadow-md shadow-kenya-red/20 normal-case"
                 data-cursor="hover"
               >
                 Shop Now
@@ -143,6 +137,7 @@ export default function Navigation() {
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-espresso p-8 pt-24"
             >
+              <Logo size="xl" className="mb-10" />
               <div className="flex flex-col gap-8">
                 {siteConfig.navLinks.map((link, i) => (
                   <motion.a
@@ -152,7 +147,7 @@ export default function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
                     onClick={() => setIsMobileOpen(false)}
-                    className="text-2xl font-display tracking-wider text-cream hover:text-gold transition-colors"
+                    className="type-title text-cream hover:text-kenya-green-light transition-colors"
                   >
                     {link.label}
                   </motion.a>

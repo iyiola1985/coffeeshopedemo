@@ -36,13 +36,13 @@ export default function SubscriptionPlans() {
                 data-cursor="hover"
               >
                 {plan.popular && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-espresso text-gold text-xs font-semibold tracking-wider uppercase rounded-full">
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-espresso text-gold type-badge rounded-full">
                     Most Popular
                   </span>
                 )}
 
                 <div className="mb-8">
-                  <h3 className="font-display text-3xl tracking-wide mb-2">
+                  <h3 className="type-title mb-2">
                     {plan.name}
                   </h3>
                   <p

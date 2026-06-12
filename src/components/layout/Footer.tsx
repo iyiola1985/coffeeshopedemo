@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Instagram, Twitter, Facebook, Youtube } from "lucide-react";
+import Logo from "@/components/ui/Logo";
 import { footerLinks, siteConfig } from "@/lib/data";
 
 const socialLinks = [
@@ -18,22 +19,22 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <a
-                href="#"
-                className="font-display text-4xl tracking-wider text-cream inline-block mb-6"
-              >
-                ROASTORY
+              <a href="#" className="inline-block mb-6" data-cursor="hover">
+                <Logo size="xl" />
               </a>
-              <p className="text-cream/60 leading-relaxed max-w-sm mb-8">
+              <p className="type-subtitle text-cream/60 max-w-sm mb-4">
                 {siteConfig.description}
+              </p>
+              <p className="type-perk text-kenya-green-light/80 mb-8 normal-case">
+                {siteConfig.tagline}
               </p>
               <div className="flex gap-4">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    whileHover={{ y: -3, color: "#D4A017" }}
-                    className="w-10 h-10 rounded-full bg-cream/5 flex items-center justify-center text-cream/60 hover:text-gold hover:bg-gold/10 transition-colors duration-300"
+                    whileHover={{ y: -3 }}
+                    className="w-10 h-10 rounded-full bg-cream/5 flex items-center justify-center text-cream/60 hover:text-kenya-green-light hover:bg-kenya-green/10 transition-colors duration-300"
                     aria-label={social.label}
                     data-cursor="hover"
                   >
@@ -44,13 +45,13 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-display text-lg tracking-wider mb-6">Shop</h4>
+              <h4 className="type-title text-cream mb-6">Shop</h4>
               <ul className="space-y-3">
                 {footerLinks.shop.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-cream/60 hover:text-gold transition-colors duration-300 text-sm"
+                      className="type-subtitle text-cream/60 hover:text-gold transition-colors duration-300"
                     >
                       {link.label}
                     </a>
@@ -60,13 +61,13 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-display text-lg tracking-wider mb-6">Company</h4>
+              <h4 className="type-title text-cream mb-6">Company</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-cream/60 hover:text-gold transition-colors duration-300 text-sm"
+                      className="type-subtitle text-cream/60 hover:text-gold transition-colors duration-300"
                     >
                       {link.label}
                     </a>
@@ -76,13 +77,13 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-display text-lg tracking-wider mb-6">Support</h4>
+              <h4 className="type-title text-cream mb-6">Support</h4>
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-cream/60 hover:text-gold transition-colors duration-300 text-sm"
+                      className="type-subtitle text-cream/60 hover:text-gold transition-colors duration-300"
                     >
                       {link.label}
                     </a>
@@ -94,7 +95,7 @@ export default function Footer() {
 
           <div className="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-cream/40 text-sm">
-              &copy; {new Date().getFullYear()} Roastory. All rights reserved.
+              &copy; {new Date().getFullYear()} Taste of Kenya. Grown in Kenya — Loved Worldwide.
             </p>
             <div className="flex gap-6 text-sm text-cream/40">
               <a href="#" className="hover:text-gold transition-colors">

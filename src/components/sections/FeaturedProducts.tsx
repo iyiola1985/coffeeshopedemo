@@ -11,14 +11,14 @@ import FadeIn from "@/components/ui/FadeIn";
 export default function FeaturedProducts() {
   return (
     <section id="featured" className="section-padding relative bg-cream dark:bg-espresso-dark overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-espresso/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-kenya-green/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-kenya-red/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionHeading
-          label="Curated Selection"
+          label="Kenyan Speciality Coffee"
           title="Featured Products"
-          description="Handpicked blends that define the Roastory experience. Each roast tells a unique story of origin and craftsmanship."
+          description="Pure Kenyan coffee sourced directly from partner farms. Every product supports fair pay and a simplified supply chain."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -41,7 +41,7 @@ export default function FeaturedProducts() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    <span className="absolute top-4 left-4 px-3 py-1 bg-gold text-espresso text-xs font-semibold tracking-wider uppercase rounded-full">
+                    <span className="absolute top-4 left-4 px-3 py-1.5 bg-kenya-red text-cream type-badge rounded-full">
                       {product.tag}
                     </span>
 
@@ -56,10 +56,10 @@ export default function FeaturedProducts() {
                   </div>
 
                   <div className="p-6">
-                    <p className="text-gold text-xs tracking-widest uppercase mb-2">
+                    <p className="type-badge text-kenya-green mb-2">
                       {product.origin}
                     </p>
-                    <h3 className="font-display text-2xl text-espresso dark:text-cream mb-2 tracking-wide">
+                    <h3 className="type-title text-espresso dark:text-cream mb-2">
                       {product.name}
                     </h3>
                     <div className="flex items-center justify-between">

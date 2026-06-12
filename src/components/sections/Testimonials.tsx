@@ -23,7 +23,7 @@ export default function Testimonials() {
         <SectionHeading
           label="Community Love"
           title="Customer Testimonials"
-          description="Don't just take our word for it. Hear from the coffee lovers who've made Roastory part of their story."
+          description="Don't just take our word for it. Hear from coffee lovers who've made Taste of Kenya part of their daily ritual."
           light
         />
 

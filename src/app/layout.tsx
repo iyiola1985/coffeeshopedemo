@@ -1,32 +1,33 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Oswald, Barlow } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import CustomCursor from "@/components/ui/CustomCursor";
 import ParticlesBackground from "@/components/ui/ParticlesBackground";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
+const oswald = Oswald({
   subsets: ["latin"],
-  variable: "--font-bebas",
+  weight: ["500", "600", "700"],
+  variable: "--font-oswald",
   display: "swap",
 });
 
-const inter = Inter({
+const barlow = Barlow({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600"],
+  variable: "--font-barlow",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Roastory | Premium Artisan Coffee",
+  title: "Taste of Kenya | Speciality Coffee from Kenya",
   description:
-    "Every Great Day Begins With Exceptional Coffee. Discover premium artisan coffee crafted with passion from the world's finest origins.",
-  keywords: ["coffee", "premium coffee", "artisan coffee", "subscription", "roastory"],
+    "Speciality coffee from Kenya — simplifying the coffee supply chain. Premium Kenyan coffee sourced directly from the finest farms.",
+  keywords: ["coffee", "Kenyan coffee", "speciality coffee", "Taste of Kenya", "direct trade"],
   openGraph: {
-    title: "Roastory | Premium Artisan Coffee",
-    description: "Every Great Day Begins With Exceptional Coffee",
+    title: "Taste of Kenya | Speciality Coffee from Kenya",
+    description: "Speciality coffee from Kenya — simplifying the coffee supply chain",
     type: "website",
   },
 };
@@ -39,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${bebasNeue.variable} ${inter.variable} font-body antialiased`}
+        className={`${oswald.variable} ${barlow.variable} font-body antialiased`}
       >
         <ThemeProvider>
           <LoadingScreen />

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Instagram } from "lucide-react";
-import { instagramPosts } from "@/lib/data";
+import { instagramPosts, siteConfig } from "@/lib/data";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -12,9 +12,9 @@ export default function InstagramGallery() {
     <section className="section-padding relative bg-cream dark:bg-espresso overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
-          label="@roastorycoffee"
+          label={`@${siteConfig.social.replace("@", "")}`}
           title="Instagram Gallery"
-          description="Follow our journey — from origin visits to morning brews. Tag us in your Roastory moments."
+          description="Follow our journey from Kenyan farms to your morning cup. Tag us in your Taste of Kenya moments."
         />
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
@@ -49,11 +49,11 @@ export default function InstagramGallery() {
             <motion.a
               href="#"
               whileHover={{ scale: 1.05 }}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 border-espresso/20 dark:border-cream/20 text-espresso dark:text-cream font-semibold hover:border-gold hover:text-gold transition-all duration-300"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 border-espresso/20 dark:border-cream/20 text-espresso dark:text-cream font-semibold hover:border-kenya-green hover:text-kenya-green transition-all duration-300"
               data-cursor="hover"
             >
               <Instagram size={20} />
-              Follow @roastorycoffee
+              Follow {siteConfig.social}
             </motion.a>
           </div>
         </FadeIn>

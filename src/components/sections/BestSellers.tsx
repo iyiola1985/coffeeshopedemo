@@ -39,19 +39,19 @@ export default function BestSellers() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-espresso/20 to-transparent" />
-                  <span className="absolute top-4 left-4 px-4 py-1.5 bg-espresso/80 backdrop-blur-sm text-gold text-xs font-semibold tracking-wider uppercase rounded-full">
+                  <span className="absolute top-4 left-4 px-4 py-1.5 bg-espresso/80 backdrop-blur-sm text-gold type-badge rounded-full">
                     {product.sales}
                   </span>
                 </div>
 
                 <div className={`p-4 md:p-8 ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                  <span className="text-gold text-xs tracking-[0.3em] uppercase font-semibold">
+                  <span className="type-badge text-gold mt-3 block">
                     #{String(i + 1).padStart(2, "0")} Best Seller
                   </span>
-                  <h3 className="font-display text-3xl md:text-5xl text-espresso dark:text-cream mt-3 mb-4 tracking-wide">
+                  <h3 className="heading-display text-2xl md:text-4xl text-espresso dark:text-cream mt-2 mb-4">
                     {product.name}
                   </h3>
-                  <p className="text-espresso/70 dark:text-cream/70 text-lg leading-relaxed mb-6 max-w-md">
+                  <p className="type-subtitle text-espresso/70 dark:text-cream/70 mb-6 max-w-md">
                     {product.description}
                   </p>
                   <div className="flex items-center gap-6">

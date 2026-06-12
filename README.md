@@ -1,6 +1,8 @@
 # coffeeshopedemo
 
-Premium Roastory coffee brand landing page built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, and GSAP.
+**Taste of Kenya** — Speciality coffee from Kenya, simplifying the coffee supply chain.
+
+Premium Kenyan coffee landing page built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, and GSAP.
 
 ## Getting Started
 

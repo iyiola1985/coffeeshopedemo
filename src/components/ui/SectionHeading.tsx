@@ -32,8 +32,8 @@ export default function SectionHeading({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className={cn(
-            "inline-block text-xs md:text-sm tracking-[0.3em] uppercase font-semibold mb-4",
-            light ? "text-gold" : "text-gold dark:text-gold"
+            "type-badge inline-block mb-4",
+            light ? "text-kenya-green-light" : "text-kenya-green"
           )}
         >
           {label}
@@ -45,7 +45,7 @@ export default function SectionHeading({
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.1 }}
         className={cn(
-          "heading-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] mb-6",
+          "heading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6",
           light ? "text-cream" : "text-espresso dark:text-cream"
         )}
       >
@@ -58,7 +58,7 @@ export default function SectionHeading({
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className={cn(
-            "text-lg md:text-xl leading-relaxed max-w-2xl",
+            "type-subtitle max-w-2xl",
             align === "center" && "mx-auto",
             light
               ? "text-cream/70"

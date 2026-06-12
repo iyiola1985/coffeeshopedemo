@@ -28,12 +28,12 @@ export default function Newsletter() {
             <Mail size={28} className="text-espresso" />
           </div>
 
-          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-espresso mb-6 tracking-wide">
-            Join the Roastory Family
+          <h2 className="heading-display text-3xl md:text-5xl lg:text-6xl text-espresso mb-6">
+            Join the Taste of Kenya Family
           </h2>
-          <p className="text-espresso/70 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Subscribe for exclusive offers, brewing tips, and first access to 
-            limited edition releases. Plus, get 15% off your first order.
+          <p className="type-subtitle text-espresso/70 mb-10 max-w-2xl mx-auto">
+            Subscribe for exclusive offers, farmer stories, and first access to 
+            limited Kenyan coffee lots. Plus, get 15% off your first order.
           </p>
 
           {submitted ? (
